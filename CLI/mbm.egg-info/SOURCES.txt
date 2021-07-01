@@ -1,0 +1,7 @@
+setup.py
+mbm.egg-info/PKG-INFO
+mbm.egg-info/SOURCES.txt
+mbm.egg-info/dependency_links.txt
+mbm.egg-info/entry_points.txt
+mbm.egg-info/requires.txt
+mbm.egg-info/top_level.txt
