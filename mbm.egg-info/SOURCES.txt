@@ -3,7 +3,7 @@ Browser_App/__init__.py
 CLI/__init__.py
 CLI/cli.py
 CLI/commands/__init__.py
-CLI/commands/weather.py
+CLI/commands/cmd_weather.py
 Desktop_GUI/__init__.py
 Mobile_App/__init__.py
 Services/__init__.py

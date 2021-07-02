@@ -1,6 +1,10 @@
 from Services.config.config import WX_API_KEY, WX_LOCATION, WX_UNITS_TEMP, WX_UNITS_WIND
 from pyowm import OWM
+from flask import Flask
+from flask_restful import Api, Resource
 
+app = Flask(__name__)
+api = Api(app)
 
 class Weather:
     def __init__(self, api_key=None, units_temp=None, units_wind=None):
@@ -42,3 +46,6 @@ class Weather:
         return [
             {**self.get_weather_data(weather), **{"location": location}} for weather in fcst.forecast.weathers
         ]
+
+if __name__ == "__main__":
+	app.run(debug=True)
