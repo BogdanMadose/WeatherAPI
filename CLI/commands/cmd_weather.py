@@ -2,15 +2,15 @@ import click
 import time
 
 from pyowm.weatherapi25 import observation, weather
-from Services import weather_service
+from Services import weather_svc
 from CLI.cli_utils import cli_utils as f
-from Services.config.config import WX_LOCATION, WX_UNITS_TEMP 
+from Services.config.config import WX_LOCATION, WX_UNITS_TEMP
 
 
 class Context:
     def __init__(self, location):
         self.location = location
-        self.weather = weather_service.Weather()
+        self.weather = weather_svc.Weather()
 
 
 @click.group()
@@ -46,7 +46,6 @@ def current(ctx, temperature_units):
         f'\U0001F315 Sunrise: {time.strftime("%H:%m", time.localtime(r["sun_rise"]))} - '
         f'Sunset: {time.strftime("%H:%m", time.localtime(r["sun_set"]))} \U0001F311'
     )
-
 
 @cli.command()
 @click.option("-tu", "--temperature-units", type=click.Choice(['c', 'celsius', 'f', 'fahrenheit'], case_sensitive=False), help="Chose temperature units to display", default = WX_UNITS_TEMP, show_default=True)
