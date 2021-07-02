@@ -1,0 +1,5 @@
+Browser_App
+CLI
+Desktop_GUI
+Mobile_App
+Services
